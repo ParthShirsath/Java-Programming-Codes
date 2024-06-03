@@ -1,25 +1,23 @@
-class Area
-{
-    float area;
-    void circle(float r)
-    {
-        area=3.14f*r*r;
-        System.out.println("Area of circle="+area);
-    }
-    void rectangle(float l,float b)
-    {
-        area=l*b;
-        System.out.println("Area of Reactangle="+area);
-    }
-    void square(float s)
-    {
-        area=s*s;
-        System.out.println("Area of Square="+area);
-    }
-    public static void main(String[] args) {
-        Area ob=new Area();
-        ob.square(5.5f);
-        ob.circle(4.5f);
-        ob.rectangle(2.2f,4.8f);
-    }
+interface shape{
+	void area_circle(float r);
+	void area_spehere(float r);
+	final float pi=3.14f;
+}
+class area implements shape{
+	public void area_circle(float r){
+		float area=pi*r*r;
+		System.out.println("Area of Circle="+area);
+	}
+	
+	public void area_spehere(float r){
+	float area=4*pi*r*r;
+		System.out.println("Area of Spehere="+area);
+	}
+}
+class demo{
+	public static void main(String ab[]){
+		area ob=new area();
+		ob.area_circle(2.11f);
+		ob.area_spehere(3.56f);
+	}
 }

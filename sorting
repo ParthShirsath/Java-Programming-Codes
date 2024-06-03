@@ -1,0 +1,9 @@
+class Sort{
+	public static void main(String ab[])
+	{
+		int i;
+		Sort ob[]=new Sort[20];
+		int a[]=new int[ab.length];
+		for(i=0;i<ab.length;i++)
+		{
+			=Integer.parseInt(ab[i]);
